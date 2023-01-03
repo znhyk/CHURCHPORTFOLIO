@@ -1,14 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
+{% load static %}
 <head>
-    <title>CHURCH PORTFOLIO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="description" content="사이트 설명" />
+    <meta name="keywords" content="검색 키워드" />
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="{% static '/assets/images/favicon.png' %}" sizes="32x32">
+    <link rel="stylesheet" href="{% static '/assets/css/default_style.css' %}">
+    <script src="{% static '/assets/js/default_script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/37a4d902d2.js" crossorigin="anonymous"></script>
 </head>
-<body></body>
-<h1>대전성심교회</h1>
-교회일정
+
+<body style="width: 100vw; padding: 0px; margin: 0px; height: 200vh;">
+    <header
+        style="display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; height: 80px;">
+        <div onclick="document.location = '/'">
+            <img src="{% static '/assets/images/logo.png' %}" style="width: 200px;">
+        </div>
+        <div style="padding: 20px;">
+            <i class="fa-solid fa-bars fa-xl" onclick="toggleNav(true);"></i>
+        </div>
+    </header>
+    <nav id="nav"
+        style="width: 200px; height: 100vh; position: fixed; top: 0; right: 0px; background-color: white; border-left: 1px solid gainsboro; right: -200px;">
+        <navHeader
+            style="display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; width: 200px; height: 80px; background-color: gainsboro;">
+            <div style="padding-left: 10px;">
+                <h6><i class="fa-solid fa-user"></i> 로그인이 필요합니다.</h6>
+            </div>
+            <div style="padding: 20px 20px 20px 0px">
+                <i class="fa-solid fa-x fa-xl" onclick="toggleNav(false);"></i>
+            </div>
+        </navHeader>
+        <navSection>
+            <ul>
+                <li style="padding: 20px 10px 20px 10px; border-bottom: 1px solid gainsboro;">
+                    <h4>교회 소식 보기 <i class="fa-regular fa-chevron-right"></i></h4>
+                </li>
+                <li style="padding: 20px 10px 20px 10px; border-bottom: 1px solid gainsboro;">
+                    <h4>예배 소식 보기 <i class="fa-regular fa-chevron-right"></i></h4>
+                </li>
+                <li style="padding: 20px 10px 20px 10px; border-bottom: 1px solid gainsboro;">
+                    <h4>교회 일정 보기 <i class="fa-regular fa-chevron-right"></i></h4>
+                </li>
+            </ul>
+        </navSection>
+    </nav>
+    <section>
+        <div style="padding: 20px;">
+            <div
+                style="width: calc(100% - 20px); min-height: 200px; border-radius: 15px; border: 10px solid gainsboro;">
+                <h3 style="text-align: center; word-break: keep-all;">2023년 교회력에 따른 성서일과</h3>
+                <br>
+                <div style="background-color: antiquewhite; text-align: center;">
+                    <h5>1월</h5>
+                    <div style="background-color: beige;">
+                        <h5>1일 - 성탄 후 제1주/신년주일, 새해</h5>
+                        <h6>
+                            <br>
+                            이사야 63:7~9<br>
+                            시편 148<br>
+                            히브리서 2:10~18<br>
+                            마태복음 2:13~23<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>새해</h5>
+                        <h6>
+                            <br>
+                            전도서 3:1~13<br>
+                            시편 8<br>
+                            요한계시록 21:1~6a<br>
+                            마태복음 25:31~46<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>6일 - 주현절</h5>
+                        <h6>
+                            <br>
+                            이사야 60:1~6<br>
+                            시편 72:1~7, 10~14<br>
+                            에베소서 3:1~12<br>
+                            마태복음 2:1~12<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>8일 - 주현 후 제1주/세례주일, 신학대학주일</h5>
+                        <h6>
+                            <br>
+                            이사야 63:7~9<br>
+                            시편 148<br>
+                            히브리서 2:10~18<br>
+                            마태복음 2:13~23<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>15일 - 주현 후 제2주</h5>
+                        <h6>
+                            <br>
+                            이사야 49:1~7<br>
+                            시편 40:1~11<br>
+                            고린도전서 1:1~9<br>
+                            요한복음 1:29~42<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>22일 - 주현 후 제3주</h5>
+                        <h6>
+                            <br>
+                            이사야 9:1~4<br>
+                            시편 27:1, 4~9<br>
+                            고린도전서 1:10~18<br>
+                            마태복음 4:12~23<br>
+                        </h6>
+                        <hr style="color: gainsboro;">
+                        <h5>29일 - 주현 후 제4주</h5>
+                        <h6>
+                            <br>
+                            미가 6:1~8<br>
+                            시편 15<br>
+                            고린도전서 1:18~31<br>
+                            마태복음 5:1~12<br>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="width: 100%; height: 400px; background-color: gray;">
+        <div style="text-align: center; padding: 30px 30px 0px 30px;">
+            <h4 style="color: white;">
+                <span style="text-decoration: underline;">유튜브 바로가기</span> /
+                <span style="text-decoration: underline;">오시는 길</span>
+            </h4>
+            <br>
+            <div style="width: 100%; height: 280px; background-color: black; color: white;">
+                <div style="padding: 30px;">
+                    <h4>
+                        대전성심교회
+                    </h4>
+                    <br>
+                    <hr>
+                    <br>
+                    <h5 style="word-break: keep-all;">
+                        (34901) 대전광역시 중구 오류로 68 대전성심교회
+                    </h5>
+                    <br>
+                    <br>
+                    <h6>
+                        Copyright © Stackable <span class="yearNow"></span>. All Rights Reserved.
+                    </h6>
+                </div>
+            </div>
+            <h5 style="color: white;">
+                이메일 무단 수집 거부 / 개인정보처리방침
+            </h5>
+        </div>
+    </footer>
+    <div
+        style="position: fixed; z-index: 99; top: 10px; width: 80vw; height: 50vh; background-color: white; border: 1px solid black; left: 10px; display: none;">
+
+    </div>
+    <script>
+        window.onload = () => {
+            carouselItem1 = document.getElementById("#carouselItem1");
+            carouselItem2 = document.getElementById("#carouselItem2");
+            carouselItem3 = document.getElementById("#carouselItem3");
+
+        }
+    </script>
 </body>
-<script>
-</script>
 
 </html>
